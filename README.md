@@ -6,7 +6,7 @@ The goal is to take a business dataset, clean and analyze the data while creatin
 
 **What I'm Learning**
 - Cleaning and working with data using Python and Pandas
-- Exploring databases and funding patterns within
+- Exploring databases and finding patterns within
 - Using SQL to learn basics and work with data
 - Creating dashboards with Power BI
 - Using AI to generate business insights
@@ -34,4 +34,4 @@ The goal is to take a business dataset, clean and analyze the data while creatin
 
 **Project Status**
 
-In Progress - This is an ongoing project that I'm building to improve my skills in Python, data analytics, AI, and business intellignece.
+In Progress - This is an ongoing project that I'm building to improve my skills in Python, data analytics, AI, and business intelligence.
