@@ -50,3 +50,8 @@ Charts that were created during analysis (see notebook for full code):
 - Profit by Category
 - Profit by Sub-Category
 - Monthly Sales Trend (2023-2026)
+
+## Interactive Dashboard (Tableau Public)
+https://public.tableau.com/views/SuperstoreBIDashboard/SuperstoreBIDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+<img width="999" height="799" alt="   Superstore BI Dashboard" src="https://github.com/user-attachments/assets/570a66b3-b54f-4b18-bcb2-f550ff72722f" />
