@@ -43,6 +43,8 @@ In Progress - This is an ongoing project that I'm building to improve my skills 
 - **Tables are discounted at 25.8% on average** — over 10 points higher than the dataset average (~15.5%), making heavy discounting the most likely direct cause of their losses.
 - **Sales show strong, repeating seasonality**: January and February are consistently the weakest months every year, while September, November, and December are consistently the strongest.
 - **Tamara Chand is the most valuable customer**, generating \$8,981 in profit — 29% more than the next-highest customer (Raymond Buch, \$6,976).
+- **Profit margin analysis reveals hidden risk**: Paper, Labels, and Envelopes have the healthiest average profit margins (~42%), while Binders (-19.5%) and Appliances (-14.9%) only look profitable in raw dollars because high sales volume masks many individual money-losing orders.
+- **Shipping times align logically with service tier**: Standard Class averages ~5 days, Second Class ~3.2 days, First Class ~2.2 days, and Same Day ~0.04 days — confirming data integrity in the shipping fields.
 
 ## Visualizations
 
