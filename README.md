@@ -56,4 +56,5 @@ Charts that were created during analysis (see notebook for full code):
 ## Interactive Dashboard (Tableau Public)
 https://public.tableau.com/views/SuperstoreBIDashboard/SuperstoreBIDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
-<img width="999" height="799" alt="   Superstore BI Dashboard" src="https://github.com/user-attachments/assets/570a66b3-b54f-4b18-bcb2-f550ff72722f" />
+<img width="1998" height="1590" alt="image" src="https://github.com/user-attachments/assets/a59b5cb2-5776-4b82-9d39-2da982004cee" />
+
