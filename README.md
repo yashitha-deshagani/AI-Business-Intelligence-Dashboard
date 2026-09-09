@@ -47,9 +47,9 @@ flowchart LR
 
 ## Dashboard
 
-![Dashboard Screenshot](image.png)
+*(Screenshot below — see live interactive version linked above)*
+<img width="999" height="799" alt="   Superstore BI Dashboard" src="https://github.com/user-attachments/assets/ebdb4f3f-579f-4e75-9400-b36024aba73e" />
 
-*3 KPI cards (Revenue, Profit, Customers) + 5 interactive charts (Category, Sub-Category, Monthly Trend, Regional Performance, Customer Analysis) with working filters.*
 
 ## Key Findings
 
