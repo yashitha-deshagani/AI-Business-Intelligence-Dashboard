@@ -1,65 +1,68 @@
-**AI Business Intelligence Dashboard**
+# AI Business Intelligence Dashboard
 
-I'm building this project to learn how businesses can use data and AI to make smarter, more informed decisions across their entire company. 
+An end-to-end business intelligence pipeline that cleans raw retail sales data, analyzes it in Python and SQL, visualizes it in an interactive dashboard, and generates AI-powered business recommendations grounded strictly in the underlying data.
 
-The goal is to take a business dataset, clean and analyze the data while creating clear visualizations, and eventually use AI to look for patterns and insights that can make recommendations, which helps businesses in the long-run.
+## Overview
 
-**What I'm Learning**
-- Cleaning and working with data using Python and Pandas
-- Exploring databases and finding patterns within
-- Using SQL to learn basics and work with data
-- Creating dashboards with Power BI
-- Using AI to generate business insights
-- Turning data into recommendations and then comparing/contrasting with future data
+This project simulates the full workflow of a data analyst at a retail company: taking a messy raw dataset all the way through to boardroom-ready insights. It answers concrete business questions — which products are losing money, which regions to invest in, who the highest-value customers are — using a real ~10,000-row retail sales dataset (Superstore).
 
-**Planned Features**
-- Uploading a business dataset
-- Cleaning and organizing the data
-- Analyzing important business metrics
-- Finding trends and patterns
-- Creating visualizations for better view
-- Building a Power BI dashboard
-- Adding AI-generated insights
-- Generating business recommendations
+## Problem Statement
 
-**Tools**
+Businesses generate large volumes of transactional data but often lack the tooling to turn it into clear, actionable decisions. This project builds a pipeline that takes raw sales data and automatically surfaces the metrics and recommendations a business would need to make pricing, regional, and customer-retention decisions — combining traditional analytics with an AI layer for automated interpretation.
 
-- Python
-- Pandas
-- NumPy
-- SQL
-- Power BI
-- Scikit-learn
-- AI / LLM API
+## Tech Stack
 
-**Project Status**
+| Layer | Tools |
+|---|---|
+| Data cleaning & analysis | Python, Pandas, NumPy |
+| Querying | SQL (SQLite) |
+| Visualization | Tableau Public |
+| AI insights | Google Gemini API |
+| Version control | Git, GitHub |
+| Environment | Google Colab |
 
-In Progress - This is an ongoing project that I'm building to improve my skills in Python, data analytics, AI, and business intelligence.
+## Architecture
+
+```mermaid
+flowchart LR
+    A[Raw CSV Data] --> B[Python/Pandas: Clean & Transform]
+    B --> C[Calculated Fields: Profit Margin, Ship Time]
+    B --> D[SQLite Database]
+    D --> E[SQL Queries: Business Questions]
+    B --> F[Tableau Dashboard]
+    C --> G[Real Calculated Metrics]
+    G --> H[Gemini API: Grounded Prompt]
+    H --> I[AI-Generated Business Recommendations]
+    E --> F
+```
+
+## Setup Instructions
+
+1. Clone this repository
+2. Open `superstore_analysis.ipynb` in Google Colab or Jupyter
+3. Upload the Superstore dataset (`.csv`) to your Colab session
+4. Run cells sequentially — the notebook covers data cleaning, SQL analysis, calculated fields, and AI insight generation
+5. For AI insights: get a free Gemini API key at [aistudio.google.com](https://aistudio.google.com), add it as a Colab secret named `Gemini_API_Key`
+6. View the live interactive dashboard: [Tableau Public Dashboard](https://public.tableau.com/views/SuperstoreBIDashboard/SuperstoreBIDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+## Dashboard
+
+![Dashboard Screenshot](image.png)
+
+*3 KPI cards (Revenue, Profit, Customers) + 5 interactive charts (Category, Sub-Category, Monthly Trend, Regional Performance, Customer Analysis) with working filters.*
 
 ## Key Findings
 
-- **Furniture generates nearly as much revenue as Office Supplies (\$755K vs \$732K) but only ~3% profit margin** compared to Office Supplies' ~17%. Furniture also has the highest average discount rate (17.3% vs 13.1% for Technology).
-- **Tables are the single biggest profit problem in the business, losing \$17,753 overall** — more than 4x the losses of the next-worst sub-category (Bookcases, -\$3,632).
-- **Tables are discounted at 25.8% on average** — over 10 points higher than the dataset average (~15.5%), making heavy discounting the most likely direct cause of their losses.
-- **Sales show strong, repeating seasonality**: January and February are consistently the weakest months every year, while September, November, and December are consistently the strongest.
-- **Tamara Chand is the most valuable customer**, generating \$8,981 in profit — 29% more than the next-highest customer (Raymond Buch, \$6,976).
-- **Profit margin analysis reveals hidden risk**: Paper, Labels, and Envelopes have the healthiest average profit margins (~42%), while Binders (-19.5%) and Appliances (-14.9%) only look profitable in raw dollars because high sales volume masks many individual money-losing orders.
-- **Shipping times align logically with service tier**: Standard Class averages ~5 days, Second Class ~3.2 days, First Class ~2.2 days, and Same Day ~0.04 days — confirming data integrity in the shipping fields.
-
-## Visualizations
-
-Charts that were created during analysis (see notebook for full code):
-- Profit by Category
-- Profit by Sub-Category
-- Monthly Sales Trend (2023-2026)
-
-## Interactive Dashboard (Tableau Public)
-https://public.tableau.com/views/SuperstoreBIDashboard/SuperstoreBIDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
-
-<img width="1998" height="1590" alt="image" src="https://github.com/user-attachments/assets/a59b5cb2-5776-4b82-9d39-2da982004cee" />
+- **Furniture generates nearly as much revenue as Office Supplies** ($755K vs $732K) but only ~3% profit margin compared to Office Supplies' ~17%, driven by an above-average discount rate (17.3%).
+- **Tables are the single biggest profit problem**, losing $17,753 overall — over 4x the next-worst sub-category (Bookcases, -$3,632) — caused by a 25.8% average discount rate, far above the dataset average of ~15.5%.
+- **Sales show strong, repeating seasonality**: January/February are consistently the weakest months every year, while September, November, and December are consistently the strongest.
+- **Tamara Chand is the most valuable customer**, generating $8,981 in profit — 29% more than the next-highest customer.
+- **Profit margin analysis reveals hidden risk**: Binders (-19.5% avg margin) and Appliances (-14.9%) only look profitable in raw dollars due to high sales volume masking many individual money-losing orders.
+- **West is the top-performing region** ($110,798 profit), while Central lags despite decent revenue, converting to the lowest profit of any region ($39,865).
 
 ## AI-Generated Business Analysis
-*Generated using Google Gemini API, grounded in real calculated metrics from this dataset (see notebook for full prompt/code).*
+
+*Generated using Google Gemini API, grounded strictly in the real calculated metrics above — the model is explicitly instructed not to invent any statistics not present in the data (see notebook for full prompt/code).*
 
 ```
 Based on the data provided, here is the business analysis addressing your four questions:
@@ -88,3 +91,18 @@ The top 5 most valuable customers by profit generated are:
 3. Reallocate Capital to High-Margin Categories and Regions: Double down on selling Technology products ($146,543.38 profit) and Office Supplies ($126,023.44 profit) in high-performing markets like the West ($110,798.82 profit) and East ($94,883.26 profit) regions.
 ```
 
+## Future Improvements
+
+- Add a live database connection (e.g., PostgreSQL) instead of an in-memory SQLite table
+- Automate the pipeline to refresh insights on a schedule as new data arrives
+- Expand AI integration to support natural-language querying of the dashboard
+- Add predictive modeling (e.g., forecasting next month's revenue) using scikit-learn
+- Deploy the dashboard publicly with authentication for multi-user access
+
+## Tools
+
+Python · Pandas · NumPy · SQL · Tableau Public · Google Gemini API
+
+## Project Status
+
+**Complete** — Phase 1 of an ongoing data analytics and AI portfolio project.
