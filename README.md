@@ -48,7 +48,7 @@ flowchart LR
 ## Dashboard
 
 *(Screenshot below — see live interactive version linked above)*
-<img width="999" height="799" alt="   Superstore BI Dashboard" src="https://github.com/user-attachments/assets/ebdb4f3f-579f-4e75-9400-b36024aba73e" />
+<img width="1003" height="803" alt="Screenshot 2026-09-08 at 10 45 02 PM" src="https://github.com/user-attachments/assets/e720ec45-500c-4cd0-96f0-43b3fddbe56e" />
 
 
 ## Key Findings
