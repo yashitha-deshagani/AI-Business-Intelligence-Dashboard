@@ -58,3 +58,33 @@ https://public.tableau.com/views/SuperstoreBIDashboard/SuperstoreBIDashboard?:la
 
 <img width="1998" height="1590" alt="image" src="https://github.com/user-attachments/assets/a59b5cb2-5776-4b82-9d39-2da982004cee" />
 
+## AI-Generated Business Analysis
+*Generated using Google Gemini API, grounded in real calculated metrics from this dataset (see notebook for full prompt/code).*
+
+```
+Based on the data provided, here is the business analysis addressing your four questions:
+
+1. Which products/sub-categories are performing poorly, and by how much?
+The three worst-performing sub-categories by profit are operating at a net loss:
+- Tables: -$17,753.21 profit (loss of $17,753.2061)
+- Bookcases: -$3,632.07 profit (loss of $3,632.0736)
+- Supplies: -$1,171.39 profit (loss of $1,171.3945)
+
+2. Which region should the company focus on, and why?
+- To maximize proven growth: The company should focus on the West region, as it is the top profit driver generating $110,798.82, followed by the East region at $94,883.26.
+- To address underperformance: Management may need to focus on the Central region, which generated the lowest profit at $39,865.31, as well as the South region at $46,749.43.
+
+3. Who are the most valuable customers?
+The top 5 most valuable customers by profit generated are:
+1. Tamara Chand: $8,981.32
+2. Raymond Buch: $6,976.10
+3. Sanjit Chand: $5,757.41
+4. Hunter Lopez: $5,622.43
+5. Adrian Barton: $5,444.81
+
+4. What should management do next? (Recommendations)
+1. Address Unprofitable Sub-Categories: Mitigate or eliminate losses occurring in Tables (-$17,753.21), Bookcases (-$3,632.07), and Supplies (-$1,171.39). This will help improve the overall profit margin of the Furniture category, which is currently generating only $19,729.996 in profit compared to Office Supplies ($126,023.443) and Technology ($146,543.376).
+2. Protect and Retain High-Value Customers: Focus retention efforts on key profit-generating accounts like Tamara Chand ($8,981.32) and Raymond Buch ($6,976.10), who represent a key portion of total customer profits across the 800 total customers.
+3. Reallocate Capital to High-Margin Categories and Regions: Double down on selling Technology products ($146,543.38 profit) and Office Supplies ($126,023.44 profit) in high-performing markets like the West ($110,798.82 profit) and East ($94,883.26 profit) regions.
+```
+
