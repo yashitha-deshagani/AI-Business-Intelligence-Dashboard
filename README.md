@@ -2,9 +2,11 @@
 
 An end-to-end business intelligence pipeline that cleans raw retail sales data, analyzes it in Python and SQL, visualizes it in an interactive dashboard, and generates AI-powered business recommendations grounded strictly in the underlying data.
 
+**At a glance:** $2,326,534 revenue · $292,297 profit · 800 customers · ~10,000 orders analyzed
+
 ## Overview
 
-This project simulates the full workflow of a data analyst at a retail company: taking a messy raw dataset all the way through to boardroom-ready insights. It answers concrete business questions — which products are losing money, which regions to invest in, who the highest-value customers are — using a real ~10,000-row retail sales dataset (Superstore).
+This project simulates the full workflow of a data analyst at a retail company: taking a messy raw dataset all the way through to boardroom-ready insights. It answers concrete business questions - which products are losing money, which regions to invest in, who the highest-value customers are - using a real ~10,000-row retail sales dataset (Superstore).
 
 ## Problem Statement
 
@@ -48,21 +50,20 @@ flowchart LR
 ## Dashboard
 
 *(Screenshot below — see live interactive version linked above)*
-<img width="1003" height="803" alt="Screenshot 2026-09-08 at 10 45 02 PM" src="https://github.com/user-attachments/assets/e720ec45-500c-4cd0-96f0-43b3fddbe56e" />
-
+<img width="1003" height="803" alt="Superstore BI Dashboard overview" src="https://github.com/user-attachments/assets/e720ec45-500c-4cd0-96f0-43b3fddbe56e" />
 
 ## Key Findings
 
 - **Furniture generates nearly as much revenue as Office Supplies** ($755K vs $732K) but only ~3% profit margin compared to Office Supplies' ~17%, driven by an above-average discount rate (17.3%).
-- **Tables are the single biggest profit problem**, losing $17,753 overall — over 4x the next-worst sub-category (Bookcases, -$3,632) — caused by a 25.8% average discount rate, far above the dataset average of ~15.5%.
+- **Tables are the single biggest profit problem**, losing $17,753 overall - over 4x the next-worst sub-category (Bookcases, -$3,632) - caused by a 25.8% average discount rate, far above the dataset average of ~15.5%.
 - **Sales show strong, repeating seasonality**: January/February are consistently the weakest months every year, while September, November, and December are consistently the strongest.
-- **Tamara Chand is the most valuable customer**, generating $8,981 in profit — 29% more than the next-highest customer.
+- **Tamara Chand is the most valuable customer**, generating $8,981 in profit - 29% more than the next-highest customer.
 - **Profit margin analysis reveals hidden risk**: Binders (-19.5% avg margin) and Appliances (-14.9%) only look profitable in raw dollars due to high sales volume masking many individual money-losing orders.
 - **West is the top-performing region** ($110,798 profit), while Central lags despite decent revenue, converting to the lowest profit of any region ($39,865).
 
 ## AI-Generated Business Analysis
 
-*Generated using Google Gemini API, grounded strictly in the real calculated metrics above — the model is explicitly instructed not to invent any statistics not present in the data (see notebook for full prompt/code).*
+*Generated using Google Gemini API. The prompt passes only the pre-calculated metrics above (revenue, profit by category/region, worst sub-categories, top customers) - never raw transaction rows - so the model has no numbers available to hallucinate from (see notebook for full prompt/code).*
 
 ```
 Based on the data provided, here is the business analysis addressing your four questions:
@@ -93,16 +94,13 @@ The top 5 most valuable customers by profit generated are:
 
 ## Future Improvements
 
-- Add a live database connection (e.g., PostgreSQL) instead of an in-memory SQLite table
-- Automate the pipeline to refresh insights on a schedule as new data arrives
 - Expand AI integration to support natural-language querying of the dashboard
 - Add predictive modeling (e.g., forecasting next month's revenue) using scikit-learn
-- Deploy the dashboard publicly with authentication for multi-user access
 
-## Tools
+## Tech Stack Summary
 
 Python · Pandas · NumPy · SQL · Tableau Public · Google Gemini API
 
 ## Project Status
 
-**Complete** — Phase 1 of an ongoing data analytics and AI portfolio project.
+**Complete** - Phase 1 of an ongoing data analytics and AI portfolio project.
